@@ -17,7 +17,7 @@ async function getCoordinates(cityName){
     let lon
     let city = cityName||document.querySelector("#city").value
     storeCity(city)
-    const geoURL = `http://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=5&appid=${weatherAPIKey}`
+    const geoURL = `https://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=5&appid=${weatherAPIKey}`
     await fetch(geoURL)
         .then(res=>res.json())
         .then(res=>{
